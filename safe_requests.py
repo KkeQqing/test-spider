@@ -39,7 +39,7 @@ def safe_get(url,
     """
 
     # 默认 User-Agent（模拟 Chrome）
-    default_headers = BROWSER_HEADERS
+    default_headers = BROWSER_HEADERS.copy()
     if headers:
         default_headers.update(headers)
     headers = default_headers

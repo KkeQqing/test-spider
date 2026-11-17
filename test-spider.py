@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from safe_requests import safe_get
+from safe_requests import safe_get, BROWSER_HEADERS
 
 # 使用 safe_get 获取百度首页
 result = safe_get("https://www.baidu.com")
@@ -44,3 +44,5 @@ custom_headers = {
 }
 
 result = safe_get("https://example.com", headers=custom_headers)
+print(BROWSER_HEADERS)
+
